@@ -1,8 +1,28 @@
 package com.bridgelabz;
 
+import java.util.Random;
+
 public class SnakeAndLadder {
-        int position = 0;     //initializing start position to 0
+    //initializing start position
+        int position = 0;
+
+    /* This main method is used to call rollDice
+     * Store the output of rollDice method
+     */
     public static void main(String[] args) {
-        System.out.println("Snake and Ladder problem");
+        SnakeAndLadder snakeLadder = new SnakeAndLadder();
+        int diceValue = snakeLadder.rollDice();
+    }
+
+    /* This method is used to define constructor
+     * generate random numbers between 1 and 6
+     * return int This returns the random numbers
+     */
+    public int rollDice() {
+        Random random = new Random();
+        int dice = (random.nextInt (6) + 1);
+        System.out.println("Die Roll Is : " + dice);
+        return dice;
     }
 }
+
